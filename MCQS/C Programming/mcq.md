@@ -177,55 +177,145 @@ int main()
 ```
 Output- sizeof(str1) = 4, sizeof(str2) = 10 <br> 
 
-Q2:-
+Q21:-
 ```
+#include
+void f(int *p, int *q)
+{
+  p = q;
+ *p = 2;
+}
+int i = 0, j = 1;
+int main()
+{
+  f(&i, &j);
+  printf("%d %d n", i, j);
+  getchar();
+  return 0;
+}
 ```
-Output- 
+Output- 0 &nbsp; 1 <br> 
 
-Q2:-
+Q22:- The following C declarations 
 ```
+struct node
+{
+   int i;
+   float j;
+};
+struct node *s[10] ;
 ```
-Output- 
+Output- An array, each element of which is a pointer to a structure of type node <br>
 
-Q2:-
+Q23:-
 ```
+#include <stdio.h>
+int *A, stkTop;
+int stkFunc (int opcode, int val)
+{
+    static int size=0, stkTop=0;
+    switch (opcode)
+    {
+    case -1:
+        size = val;
+        break;
+    case 0:
+        if (stkTop < size ) A[stkTop++]=val;
+        break;
+    default:
+        if (stkTop) return A[--stkTop];
+    }
+    return -1;
+}
+int main()
+{
+    int B[20];
+    A=B;
+    stkTop = -1;
+    stkFunc (-1, 10);
+    stkFunc (0, 5);
+    stkFunc (0, 10);
+    printf ("%dn", stkFunc(1, 0)+ stkFunc(1, 0));
+}
 ```
-Output- 
+Output- 15 <br> 
 
-Q2:-
+Q24:-
 ```
+# include <stdio.h>
+int main( )
+{
+    char s1[7] = "1234", *p;
+    p = s1 + 2;
+    *p = '0' ;
+    printf ("%s", s1);
+}
 ```
-Output- 
+Output- 1204 <br> 
 
-Q2:-
+Q25:- Assuming int size is 4 bytes, what is going to happen when we compile and run the following program? 
 ```
+#include “stdio.h”
+int main()
+{
+  printf(“GeeksQuizn”);
+  main();
+  return 0;
+}
 ```
-Output- 
+Output- GeeksQuiz would be printed until stack overflow happens for this program. <br> 
 
-Q2:-
+Q26:- For the following declaration of a function in C, pick the best statement 
 ```
+int [] fun(void (*fptr)(int *));
 ```
-Output- 
+Output- It will result in compile error. <br>
 
-Q2:-
+Q27:- 
 ```
+#include “stdio.h”
+#include “stdio.h”
+#include “stdio.h”
+ 
+int main()
+{
+ printf(“Whether this statement would be printed?”)
+ return 0;
+}
 ```
-Output- 
+Output- False <br>
 
-Q2:-
+Q28:-
 ```
+int array2D[2][4] = {1,2,3,4,5,6,7,8}; /* (i) */
+int array2D[][4] = {1,2,3,4,5,6,7,8}; /* (ii) */
+int array2D[2][] = {1,2,3,4,5,6,7,8}; /* (iii) */
+int array2D[][] = {1,2,3,4,5,6,7,8}; /* (iv) */
 ```
-Output- 
+Output- Only (i) and (ii) are correct. <br>
 
-Q2:-
+Q29:-
 ```
+#include <stdio.h>
+ 
+int main()
+{
+ int var;  /*Suppose address of var is 2000 */
+ 
+ void *ptr = &var;
+ *ptr = 5;
+ printf("var=%d and *ptr=%d",var,*ptr);
+              
+ return 0;
+}
 ```
-Output- 
+Output- Compile error <br> 
 
-Q2:-
+Q30:-
 ```
+struct {int a[2];} arr[] = {1,2};
 ```
-Output- 
+Output- No compile error and it’ll create array arr of 1 element. Each of the element of arr contain a struct field of int array of 2 elements. arr[0]. a[0] would be 1 and arr[0].a[1] would be 2. <br>
 
 Q2:-
 ```
