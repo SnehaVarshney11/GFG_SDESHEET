@@ -95,7 +95,29 @@ Which file is generated after pre-processing of a C program?
 ```
 Output- .i <br>
 
-Q2:-
+Q11:-
+```
+In C, static storage class cannot be used with:
+```
+Output- Function parameter <br>
+
+Q12:- In C, we cannot have an array of void type and function types. 
+For example, below program throws compiler error 
+```
+int main()
+{
+    void arr[100];
+}
+```
+But we can have array of void pointers and function pointers. The below program works fine. 
+```
+int main()
+{
+    void *arr[100];
+}
+```
+
+Q13:-
 ```
 ```
 Output- 
@@ -119,14 +141,3 @@ Q2:-
 ```
 ```
 Output- 
-
-Q2:-
-```
-```
-Output- 
-
-Q2:-
-```
-```
-Output- 
-
