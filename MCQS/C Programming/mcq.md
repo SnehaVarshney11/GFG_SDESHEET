@@ -317,17 +317,143 @@ struct {int a[2];} arr[] = {1,2};
 ```
 Output- No compile error and it’ll create array arr of 1 element. Each of the element of arr contain a struct field of int array of 2 elements. arr[0]. a[0] would be 1 and arr[0].a[1] would be 2. <br>
 
-Q2:-
+Q31:-
 ```
+#include <stdio.h>
+ 
+int main()
+{
+    unsigned int i = 65000;
+    while (i++ != 0);
+    printf("%d", i);
+    return 0;
+}
 ```
-Output- 
+Output- 1 <br> 
 
-Q2:-
+Q32:- The following function computes the maximum value contained in an integer array p[] of size n (n >= 1) 
 ```
+int max(int *p, int n)
+{
+    int a=0, b=n-1;
+    while (__________)
+    {
+        if (p[a] <= p[b])
+        {
+            a = a+1;
+        }
+        else
+        {
+            b = b-1;
+        }
+    }
+    return p[a];
+}
 ```
-Output- 
+Output- b!=a <br>
 
-Q2:-
+Q33:-
+```
+void f(int* p, int m)
+{
+    m = m + 5;
+    *p = *p + m;
+    return;
+}
+void main()
+{
+    int i=5, j=10;
+    f(&i, j);
+    printf("%d", i+j);
+}
+```
+Output- 30 beacuse for i, address is passed. For j, value is passed. So in function f, p will contain address of i and m will contain value 10. Ist statement of f() will change m to 15. Then 15 will be added to value at address p. It will make i = 5+15 = 20. j will remain 10. print statement will print 20+10 = 30.  <br>
+
+Q34:-
+```
+int fun()
+{
+  static int num = 16;
+  return num--;
+}
+ 
+int main()
+{
+  for(fun(); fun(); fun())
+    printf("%d ", fun());
+  return 0;
+}
+```
+Output- 14, 11, 8, 5, 2 <br>
+
+Q35:-
+```
+int fun(char *str1)
+{
+  char *str2 = str1;
+  while(*++str1);
+  return (str1-str2);
+}
+ 
+int main()
+{
+  char *str = "GeeksQuiz";
+  printf("%d", fun(str));
+  return 0;
+}
+```
+Output- 9 <br> 
+
+Q36:-
+```
+#include 
+int tmp=20;
+main( )
+{
+printf("%d ",tmp);
+func( );
+printf("%d ",tmp);
+}
+func( )
+{
+static int tmp=10;
+printf("%d ",tmp);
+}
+```
+Output- 20, 10, 20 
+
+Q37:-
+```
+Which one of the following is correct for overloaded functions in C++ ?
+```
+Output- Compiler sets up a separate function for every definition of function. <br>
+
+Q38:- 
+```
+If n has 3, then the statement a[++n]=n++;
+```
+Output- what is assigned is compiler dependent <br>
+
+Q39:-
+```
+struct (
+short s[5];
+union {
+float y;
+long z;
+}u;
+}t;
+```
+Assume that the objects of the type short, float and long occupy 2 bytes, 4 bytes and 8 bytes, respectively. The memory requirement for variable t, ignoring alignment consideration, is <br>
+Output- 18 bytes <br>
+
+Q40:- How many lines of output does the following C code produce? 
+```
+#include<stdio.h> float i=2.0; float j=1.0; float sum = 0.0; main() { while (i/j > 0.001) { j+=j; sum=sum+(i/j); printf("%fn", sum); } }
+```
+Output- 11 <br>
+
+Q41:-
 ```
 ```
 Output- 
