@@ -455,5 +455,100 @@ Output- 11 <br>
 
 Q41:-
 ```
+If only one memory location is to be reserved for a class variable, no matter how many objects are instantiated, then the variable should be declared as 
 ```
-Output- 
+Output- static <br>
+
+Q42:-
+```
+The following statement in ‘C’ 
+int (*f())[ ]; 
+declares
+```
+Output- a function returning a pointer to an array of integers. <br>
+
+Q43:-
+```
+In _______, the bodies of the two loops are merged together to form a single loop provided that they do not make any references to each other.
+```
+Output- Loop jamming <br>
+
+Q44:-
+```
+Given that x = 7.5, j = -1.0, n = 1.0, m = 2.0 the value of - - x + j == x>n> = m is: 
+```
+Output- 0 <br>
+Explanation - 
+```
+- - x + j == x > n >= m 
+6.5 + (-1.0) == 6.5 > 1.0 >= 2.0 
+5.5 == 1 > = 2.0 
+3.5 == 0 
+Which is not true, i.e. false(0). 
+```
+
+Q45:-
+```
+The translator which performs macro calls expansion is called: 
+```
+Output- Macro pre - processor <br>
+
+Q46:-
+```
+x:=1;
+i:=1;
+while (x ≤ 500)
+begin
+x:=2x ;
+i:=i+1;
+end
+```
+What is the value of i at the end of the pseudocode? <br>
+Output- 5 <br>
+
+Q47:-
+```
+A one dimensional array A has indices 1....75. Each element is a string and takes up three memory words. The array is stored at location 1120 decimal. The starting address of A[49] is
+```
+Output- 1264 because Start address of the element = base address of array + number of elements * size of each element = 1120 + 48 * 3 = 1264 <br>
+
+Q48:-
+```
+What does the following expression means ? 
+char ∗(∗(∗ a[N]) ( )) ( );
+```
+Output- a pointer to a function returning array of n pointers to function returning character pointers. <br>
+a function return array of N pointers to functions returning pointers to characters <br>
+an array of n pointers to function returning pointers to characters <br>
+an array of n pointers to function returning pointers to functions returning pointers to characters. <br>
+
+Q49:-
+```
+A language with string manipulation facilities uses the following operations. 
+
+head(s)- returns the first character of the string s 
+tail(s)- returns all but the first character of the string s 
+concat(sl, s2)- concatenates string s1 with s2. 
+
+The output of concat(head(s), head(tail(tail(s)))), where s is acbc is
+```
+Output- ab <br>
+
+Q50:-
+```
+z=x + 3 + y->f1 + y->f2; 
+for (i = 0; i < 200; i = i + 2) 
+{ 
+if (z > i) 
+{ 
+p = p + x + 3; 
+q = q + y->f1; 
+} else 
+{ 
+p = p + y->f2; 
+q = q + x + 3; 
+} 
+} 
+Assume that the variable y points to a struct (allocated on the heap) containing two fields f1 and f2, and the local variables x, y, z, p, q, and i are allotted registers. Common sub-expression elimination (CSE) optimization is applied on the code. The number of addition and the dereference operations (of the form y ->f1 or y ->f2) in the optimized code, respectively, are:
+```
+Output- 303 and 2
